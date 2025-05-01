@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zxx">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Book Your Appointment - Barber HTML-5 Template</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/slicknav.css">
+    <link rel="stylesheet" href="assets/css/flaticon.css">
+    <link rel="stylesheet" href="assets/css/gijgo.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/animated-headline.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/themify-icons.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <style>
+        .booking-section {
+            padding: 100px 0;
+            background: #f8f9fa;
+        }
+        .booking-form {
+            background: white;
+            padding: 60px;
+            border-radius: 15px;
+            box-shadow: 0 0 30px rgba(0,0,0,0.1);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .form-group {
+            margin-bottom: 30px;
+        }
+        .form-control {
+            height: 60px;
+            padding: 10px 25px;
+            font-size: 18px;
+            border: 2px solid #eee;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        .form-control:focus {
+            border-color: #ff1313;
+            box-shadow: none;
+        }
+        .checkbox-group {
+            text-align: left;
+            margin: 35px 0;
+            padding: 20px;
+            border: 2px solid #eee;
+            border-radius: 10px;
+        }
+        .checkbox-group h5 {
+            font-size: 22px;
+            margin-bottom: 20px;
+            color: #2c234d;
+        }
+        .checkbox-group label {
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+            margin: 15px 0;
+            cursor: pointer;
+            user-select: none;
+            color: #444;
+            transition: color 0.2s;
+        }
+        .checkbox-group input[type="checkbox"] {
+            width: 25px;
+            height: 25px;
+            margin-right: 15px;
+            cursor: pointer;
+        }
+        .btn-primary {
+            height: 60px;
+            font-size: 20px;
+            font-weight: 600;
+            border-radius: 10px;
+            background: #eb4848;
+            border-color: #ff1313;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background: #2c234d;
+            border-color: #2c234d;
+        }
+        .success-message {
+            color: #28a745;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+        .error-message {
+            color: #dc3545;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+        @media (max-width: 768px) {
+            .booking-form {
+                padding: 30px;
+                margin: 15px;
+            }
+            .form-control {
+                height: 50px;
+                font-size: 16px;
+            }
+            .checkbox-group label {
+                font-size: 16px;
+            }
+            .btn-primary {
+                height: 50px;
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ? Preloader Start -->
+    <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="preloader-circle"></div>
+                <div class="preloader-img pere-text">
+                    <img src="assets/img/logo/loder.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Preloader Start -->
+    <header>
+        <!--? Header Start -->
+        <div class="header-area header-transparent">
+            <div class="main-header header-sticky">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <!-- Logo -->
+                        <div class="col-xl-2 col-lg-2 col-md-1">
+                            <div class="logo">
+                                <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+                            </div>
+                        </div>
+                        <div class="col-xl-10 col-lg-10 col-md-10">
+                            <div class="menu-main d-flex align-items-center justify-content-end">
+                                <!-- Main-menu -->
+                                <div class="main-menu f-right d-none d-lg-block">
+                                    <nav>
+                                        <ul id="navigation">
+                                            <li><a href="index.html">Home</a></li>
+                                            <li><a href="services.html">Services</a></li>
+                                            <li><a href="about.html">About</a></li>
+                                            <li><a href="contact.html">Contact</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <div class="header-right-btn f-right d-none d-lg-block ml-30">
+                                    <a href="appointment.html" class="btn header-btn">Book Appointment</a>
+                                </div>
+                            </div>
+                        </div>   
+                        <!-- Mobile Menu -->
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header End -->
+    </header>
+    <main>
+        <!--? Hero Start -->
+        <div class="slider-area2">
+            <div class="slider-height2 d-flex align-items-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="hero-cap hero-cap2 pt-70 text-center">
+                                <h2>Book Your Appointment</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Hero End -->
+
+        <section class="booking-section">
+            <div class="container">
+                <div class="booking-form">
+                    <form id="bookingForm">
+                        <div class="form-group">
+                            <input type="text" id="name" class="form-control" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" class="form-control" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="date" id="date" class="form-control" required min="" max="">
+                        </div>
+                        
+                        <div class="form-group">
+                            <select id="time" class="form-control" required>
+                                <option value="">Select Time Slot</option>
+                                <option value="10:00 AM">10:00 AM</option>
+                                <option value="12:00 PM">12:00 PM</option>
+                                <option value="2:00 PM">2:00 PM</option>
+                                <option value="4:00 PM">4:00 PM</option>
+                                <option value="6:00 PM">6:00 PM</option>
+                            </select>
+                        </div>
+                        
+                        <div class="checkbox-group" required>
+                            <h5>Select Services</h5>
+                            <label><input type="checkbox" name="service" value="Haircut" data-price="100"> Haircut - Rs. 100</label>
+                            <label><input type="checkbox" name="service" value="Beard Cut" data-price="80"> Beard Cut - Rs. 80</label>
+                            <label><input type="checkbox" name="service" value="Massage" data-price="80"> Massage - Rs. 80</label>
+                            <label><input type="checkbox" name="service" value="Combo" data-price="170"> Combo - Rs. 170</label>
+                        </div>
+                        
+                        <button type="submit" id="bookNowBtn" class="btn btn-primary w-100">Book Now - Rs. 0</button>
+                    </form>
+                    <p id="message" class="mt-3 text-center"></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <!--? Footer Start-->
+        <div class="footer-area section-bg" data-background="assets/img/gallery/footer_bg.png">
+            <div class="container">
+                <div class="footer-top footer-padding">
+                    <div class="row d-flex justify-content-between">
+                        <div class="col-xl-3 col-lg-4 col-md-5 col-sm-8">
+                            <div class="single-footer-caption mb-50">
+                                <!-- logo -->
+                                <div class="footer-logo">
+                                    <a href="index.html"><img src="assets/img/logo/logo2_footer.png" alt=""></a>
+                                </div>
+                                <div class="footer-tittle">
+                                    <div class="footer-pera">
+                                        <p class="info1">Receive updates and latest news direct from Simply enter.</p>
+                                    </div>
+                                </div>
+                                <div class="footer-number">
+                                    <h4><span>+91 </span>90252 78654</h4>
+                                    <p>youremail@gmail.com</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-2 col-md-3 col-sm-5">
+                            <div class="single-footer-caption mb-50">
+                                <div class="footer-tittle">
+                                    <h4>Location </h4>
+                                    <ul>
+                                        <li><a href="#">Thane</a></li>
+                                        <li><a href="#">Navi Mumbai</a></li>
+                                        <li><a href="#">Dadar</a></li>
+                                        <li><a href="#">CSMT</a></li>
+                                        <li><a href="#">Andheri</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-2 col-md-3 col-sm-5">
+                            <div class="single-footer-caption mb-50">
+                                <div class="footer-tittle">
+                                    <h4>Explore</h4>
+                                    <ul>
+                                        <li><a href="#">Cookies</a></li>
+                                        <li><a href="about.html">About</a></li>
+                                        <li><a href="#">Privacy Policy</a></li>
+                                        <li><a href="#">Proparties</a></li>
+                                        <li><a href="#">Licenses</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-8">
+                            <div class="single-footer-caption mb-50">
+                                <div class="footer-tittle">
+                                    <h4>Location</h4>
+                                    <div class="footer-pera">
+                                        <p class="info1">Airoli, Navi Mumbai
+                                        
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- Form -->
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <div class="row d-flex justify-content-between align-items-center">
+                        <div class="col-xl-9 col-lg-8">
+                        </div>
+                        <div class="col-xl-3 col-lg-4">
+                            <!-- Footer Social -->
+                            <div class="footer-social f-right">
+
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End-->
+    </footer>
+    <!-- Scroll Up -->
+    <div id="back-top" >
+        <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
+    </div>
+
+    <!-- JS here -->
+    <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="./assets/js/popper.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="./assets/js/jquery.slicknav.min.js"></script>
+    <script src="./assets/js/owl.carousel.min.js"></script>
+    <script src="./assets/js/slick.min.js"></script>
+    <script src="./assets/js/wow.min.js"></script>
+    <script src="./assets/js/animated.headline.js"></script>
+    <script src="./assets/js/jquery.magnific-popup.js"></script>
+    <script src="./assets/js/gijgo.min.js"></script>
+    <script src="./assets/js/jquery.nice-select.min.js"></script>
+    <script src="./assets/js/jquery.sticky.js"></script>
+    <script src="./assets/js/jquery.counterup.min.js"></script>
+    <script src="./assets/js/waypoints.min.js"></script>
+    <script src="./assets/js/jquery.countdown.min.js"></script>
+    <script src="./assets/js/hover-direction-snake.min.js"></script>
+    <script src="./assets/js/contact.js"></script>
+    <script src="./assets/js/jquery.form.js"></script>
+    <script src="./assets/js/jquery.validate.min.js"></script>
+    <script src="./assets/js/mail-script.js"></script>
+    <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
+    <script src="./assets/js/plugins.js"></script>
+    <script src="./assets/js/main.js"></script>
+
+    <script>
+        // Set date restrictions
+        const dateInput = document.getElementById("date");
+        const today = new Date();
+        const maxDate = new Date();
+        maxDate.setDate(today.getDate() + 30);
+
+        // Format dates for input min/max attributes
+        const todayFormatted = today.toISOString().split('T')[0];
+        const maxDateFormatted = maxDate.toISOString().split('T')[0];
+
+        // Set min and max dates
+        dateInput.min = todayFormatted;
+        dateInput.max = maxDateFormatted;
+
+        // Function to calculate and update total price
+        function updateTotalPrice() {
+            const checkboxes = document.querySelectorAll('input[name="service"]:checked');
+            let totalPrice = 0;
+            
+            checkboxes.forEach(checkbox => {
+                totalPrice += parseInt(checkbox.getAttribute('data-price') || 0);
+            });
+            
+            const bookNowBtn = document.getElementById('bookNowBtn');
+            bookNowBtn.textContent = `Book Now - Rs. ${totalPrice}`;
+            
+            return totalPrice;
+        }
+        
+        // Add event listeners to all service checkboxes
+        document.querySelectorAll('input[name="service"]').forEach(checkbox => {
+            checkbox.addEventListener('change', updateTotalPrice);
+        });
+
+        // Function to check time slot availability
+        async function checkSlotAvailability(date, time) {
+            try {
+                const response = await fetch(`https://groom-easy-backend.onrender.com/check-availability?date=${date}&time=${time}`);
+                const data = await response.json();
+                return data.available;
+            } catch (error) {
+                console.error("Error checking availability:", error);
+                return null;
+            }
+        }
+
+        // Add event listeners for date and time changes
+        const timeInput = document.getElementById("time");
+        const messageElement = document.getElementById("message");
+
+        async function validateTimeSlot() {
+            const date = dateInput.value;
+            const time = timeInput.value;
+            
+            if (date && time) {
+                try {
+                    const response = await fetch(`https://groom-easy-backend.onrender.com/check-availability?date=${date}&time=${time}`);
+                    const data = await response.json();
+                    
+                    if (!data.available) {
+                        messageElement.className = "error-message";
+                        messageElement.innerText = data.message;
+                        document.getElementById('bookNowBtn').disabled = true;
+                        return false;
+                    } else {
+                        messageElement.innerText = "";
+                        document.getElementById('bookNowBtn').disabled = false;
+                        return true;
+                    }
+                } catch (error) {
+                    console.error('Error checking availability:', error);
+                    messageElement.className = "error-message";
+                    messageElement.innerText = "Error checking slot availability. Please try again.";
+                    document.getElementById('bookNowBtn').disabled = true;
+                    return false;
+                }
+            }
+            document.getElementById('bookNowBtn').disabled = false;
+            return true;
+        }
+
+        // Add event listeners for date and time changes
+        dateInput.addEventListener("change", validateTimeSlot);
+        timeInput.addEventListener("change", validateTimeSlot);
+
+        // Also validate when the form is submitted
+        document.getElementById("bookingForm").addEventListener("submit", async function (event) {
+            event.preventDefault();
+
+            // Check availability one final time before proceeding
+            const isAvailable = await validateTimeSlot();
+            if (!isAvailable) {
+                return; // Stop if slot is not available
+            }
+
+            // Capture form data
+            const formData = {
+                name: document.getElementById("name").value,
+                email: document.getElementById("email").value,
+                date: dateInput.value,
+                time: timeInput.value,
+                services: Array.from(document.querySelectorAll('input[name="service"]:checked'))
+                            .map(checkbox => checkbox.value),
+                totalPrice: updateTotalPrice()
+            };
+
+            if (formData.services.length === 0) {
+                messageElement.className = "error-message";
+                messageElement.innerText = "Please select at least one service.";
+                return;
+            }
+
+            try {
+                console.log('Starting booking process...');
+                
+                // First, send WhatsApp notification
+                const whatsappResponse = await fetch("https://groom-easy-backend.onrender.com/send-whatsapp", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(formData)
+                });
+
+                const whatsappData = await whatsappResponse.json();
+                console.log('WhatsApp response:', whatsappData);
+
+                // Continue with booking even if WhatsApp fails
+                if (!whatsappData.success) {
+                    console.warn('WhatsApp notification could not be sent, but proceeding with booking');
+                }
+
+                // Then process payment
+                console.log('Processing payment...');
+                
+                // Create order
+                const orderResponse = await fetch('https://groom-easy-backend.onrender.com/create-order', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ amount: formData.totalPrice })
+                });
+
+                const orderData = await orderResponse.json();
+                console.log('Order response:', orderData);
+
+                if (!orderResponse.ok) {
+                    throw new Error(orderData.message || 'Failed to create order');
+                }
+
+                // Razorpay options
+                const razorpayKey = 'rzp_test_yE897zxuogkm3U'; // Updated with your test key ID
+
+                const options = {
+                    key: razorpayKey,
+                    amount: formData.totalPrice * 100,
+                    currency: 'INR',
+                    name: 'Barber Shop',
+                    description: 'Booking Payment',
+                    order_id: orderData.orderId,
+                    handler: async function(response) {
+                        console.log('Payment success response:', response);
+                        
+                        // Send the final booking request
+                        try {
+                            console.log('Sending final booking request with data:', {
+                                ...formData,
+                                paymentId: response.razorpay_payment_id,
+                                orderId: response.razorpay_order_id
+                            });
+
+                            const bookingResponse = await fetch("https://groom-easy-backend.onrender.com/book", {
+                                method: "POST",
+                                headers: { "Content-Type": "application/json" },
+                                body: JSON.stringify({
+                                    ...formData,
+                                    paymentId: response.razorpay_payment_id,
+                                    orderId: response.razorpay_order_id,
+                                    signature: response.razorpay_signature
+                                })
+                            });
+
+                            const bookingData = await bookingResponse.json();
+                            console.log('Booking API response:', bookingData);
+                            
+                            if (bookingResponse.ok) {
+                                messageElement.className = "success-message";
+                                messageElement.innerText = "Booking successful! We'll contact you shortly to confirm your appointment.";
+                                event.target.reset();
+                            } else {
+                                messageElement.className = "error-message";
+                                messageElement.innerText = bookingData.message || "Booking failed. Please try again.";
+                            }
+                        } catch (error) {
+                            console.error("Booking error details:", error);
+                            messageElement.className = "error-message";
+                            messageElement.innerText = "An error occurred while processing your booking. Please try again.";
+                        }
+                    },
+                    prefill: {
+                        name: formData.name,
+                        email: formData.email
+                    },
+                    theme: {
+                        color: '#eb4848'
+                    },
+                    modal: {
+                        ondismiss: function() {
+                            console.log('Payment modal dismissed');
+                        }
+                    }
+                };
+
+                console.log('Opening Razorpay checkout with options:', options);
+                
+                // Open Razorpay checkout
+                const razorpayInstance = new Razorpay(options);
+                razorpayInstance.open();
+
+            } catch (error) {
+                console.error("Booking error details:", error);
+                messageElement.className = "error-message";
+                messageElement.innerText = error.message || "An error occurred while processing your booking. Please try again.";
+            }
+        });
+    </script>
+</body>
+</html>
