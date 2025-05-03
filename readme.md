@@ -2,7 +2,7 @@
 
 Groom Easy is a website for a barber shop where people can book appointments with the barber. 
 
-##Features
+## Features
 
 -Responsive Design
 -Appointment messages are sent on the barbers whatsapp.
